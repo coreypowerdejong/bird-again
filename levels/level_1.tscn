@@ -1,34 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://mi0y3pa3ecxx"]
+[gd_scene load_steps=2 format=4 uid="uid://mi0y3pa3ecxx"]
 
-[ext_resource type="Texture2D" uid="uid://bbvsxfqfa3evv" path="res://Terrain.png" id="1_jirdo"]
-[ext_resource type="PackedScene" uid="uid://cmenpqaia4jvr" path="res://player/player.tscn" id="2_jirdo"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt44k"]
-resource_name = "Terrain"
-texture = ExtResource("1_jirdo")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_bt44k"]
-tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_bt44k")
+[ext_resource type="TileSet" uid="uid://b5lgbo7a8ddp5" path="res://levels/tileset.tres" id="1_jirdo"]
 
 [node name="Level1" type="TileMapLayer"]
-tile_map_data = PackedByteArray("AAAAABMAAQABAAAAAAABABMAAQABAAAAAAACABMAAQABAAAAAAADABMAAQABAAAAAAAEABMAAQABAAAAAAAFABMAAQABAAAAAAAGABMAAQABAAAAAAAHABMAAQACAAAAAAAIABMAAQACAAAAAAAJABMAAQACAAAAAAAIABIAAQACAAAAAAAJABIAAQACAAAAAAAJABEAAQACAAAAAAAHABIAAQABAAAAAAAIABEAAQABAAAAAAAJABAAAQABAAAAAAAMABAAAQADAAAAAAAPABAAAQADAAAAAAASABAAAQABAAAAAAATABEAAQABAAAAAAAUABIAAQACAAAAAAAVABMAAQABAAAAAAAWABMAAQABAAAAAAAXABMAAQABAAAAAAAYABMAAQABAAAAAAAZABMAAQABAAAAAAASABEAAQACAAAAAAASABIAAQACAAAAAAASABMAAQACAAAAAAATABMAAQACAAAAAAATABIAAQACAAAAAAAUABMAAQACAAAAAAA=")
-tile_set = SubResource("TileSet_bt44k")
-
-[node name="Player" parent="." instance=ExtResource("2_jirdo")]
-position = Vector2(111, 440)
+tile_map_data = PackedByteArray("AAAAABMAAQABAAAAAAABABMAAQABAAAAAAACABMAAQABAAAAAAADABMAAQABAAAAAAAEABMAAQABAAAAAAAFABMAAQABAAAAAAAGABMAAQABAAAAAAAHABMAAQACAAAAAAAIABMAAQACAAAAAAAJABMAAQACAAAAAAAIABIAAQACAAAAAAAJABIAAQACAAAAAAAJABEAAQACAAAAAAAHABIAAQABAAAAAAAIABEAAQABAAAAAAAJABAAAQABAAAAAAAMABAAAQADAAAAAAAPABAAAQADAAAAAAASABAAAQABAAAAAAATABEAAQABAAAAAAAUABIAAQACAAAAAAAVABMAAQABAAAAAAAWABMAAQABAAAAAAAXABMAAQABAAAAAAAYABMAAQABAAAAAAAZABMAAQABAAAAAAASABEAAQACAAAAAAASABIAAQACAAAAAAASABMAAQACAAAAAAATABMAAQACAAAAAAATABIAAQACAAAAAAAUABMAAQACAAAAAAACABIAAgAAAAAAAQA=")
+tile_set = ExtResource("1_jirdo")

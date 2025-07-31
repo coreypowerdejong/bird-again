@@ -1,0 +1,32 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://b5lgbo7a8ddp5"]
+
+[ext_resource type="Texture2D" uid="uid://bbvsxfqfa3evv" path="res://Terrain.png" id="1_be4ft"]
+[ext_resource type="PackedScene" uid="uid://cmenpqaia4jvr" path="res://player/player.tscn" id="2_t8ifc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt44k"]
+resource_name = "Terrain"
+texture = ExtResource("1_be4ft")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_0tc62"]
+resource_name = "Scenes"
+scenes/1/scene = ExtResource("2_t8ifc")
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_bt44k")
+sources/2 = SubResource("TileSetScenesCollectionSource_0tc62")
