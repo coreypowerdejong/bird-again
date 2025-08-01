@@ -15,7 +15,6 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		$AnimatedSprite2D.play("jumping")
 	else:
 		state = player_state.IDLE
 		
@@ -43,5 +42,8 @@ func _physics_process(delta):
 			$AnimatedSprite2D.play("jumping")
 		else:
 			$AnimatedSprite2D.play("default")
-
+	if velocity.y <= 0:
+		$AnimatedSprite2D.play("jumping")
+	else:
+		$AnimatedSprite2D.play("falling")
 	move_and_slide()
