@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj8dmmhqhc32v"]
+
+[ext_resource type="Script" uid="uid://bwo7cljs5ggt2" path="res://tile_scenes/fireball_launcher/right_launcher.gd" id="1_uwmpn"]
+[ext_resource type="PackedScene" uid="uid://fvi55ywablki" path="res://tile_scenes/fireball_launcher/fireball_launcher.tscn" id="2_1royi"]
+
+[node name="RightLauncher" type="Node2D"]
+script = ExtResource("1_uwmpn")
+
+[node name="FireballLauncher" parent="." instance=ExtResource("2_1royi")]
+flip_h = true

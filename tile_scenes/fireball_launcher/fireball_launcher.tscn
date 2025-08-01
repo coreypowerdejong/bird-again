@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://fvi55ywablki"]
+
+[ext_resource type="Texture2D" uid="uid://bbvsxfqfa3evv" path="res://Terrain.png" id="1_mvtfa"]
+[ext_resource type="Script" uid="uid://ivo2iduwk32x" path="res://tile_scenes/fireball_launcher/fireball_launcher.gd" id="2_kucix"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kucix"]
+atlas = ExtResource("1_mvtfa")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1a2c"]
+atlas = ExtResource("1_mvtfa")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ph5f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kucix")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1a2c")
+}],
+"loop": true,
+"name": &"fire",
+"speed": 5.0
+}]
+
+[node name="FireballLauncher" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_6ph5f")
+script = ExtResource("2_kucix")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
